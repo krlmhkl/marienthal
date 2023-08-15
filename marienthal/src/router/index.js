@@ -9,7 +9,7 @@ const router = createRouter({
       component: () => import('../views/EmailView.vue')
     },
     {
-      path: '/job-offers/{jobOfferSecretAccessToken}',
+      path: '/job-offers/WNwi6CGqp9lgOmD4XeW8kZNdQr4DthiOpCXxOlVrh2XcJGeOuPeQ6d05o5hmyp4X',
       name: 'job-offers',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
@@ -17,7 +17,7 @@ const router = createRouter({
       component: () => import('../views/JobOfferView.vue')
     },
     {
-      path: '/new-employee-form/{jobOfferSecretAccessToken}',
+      path: '/new-employee-form/WNwi6CGqp9lgOmD4XeW8kZNdQr4DthiOpCXxOlVrh2XcJGeOuPeQ6d05o5hmyp4X',
       name: 'new-employee-form',
       component: () => import('../views/CandidateFormView.vue')
     }

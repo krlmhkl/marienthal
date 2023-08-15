@@ -6,7 +6,7 @@ import { RouterLink, RouterView } from 'vue-router';
 const businessName = ref(null)
 
 const getBusinessName = () => {
-  axios.get(`./backend/api/job-offers/{jobOfferSecretAccessToken}`)
+  axios.get(`./backend/api/job-offers/WNwi6CGqp9lgOmD4XeW8kZNdQr4DthiOpCXxOlVrh2XcJGeOuPeQ6d05o5hmyp4X`)
     .then(response => {
       businessName.value = response.data.businessName
     })

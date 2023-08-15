@@ -9,7 +9,7 @@ mock.onGet('/api/data').reply(200, {
     // Other data as needed
 });
 
-mock.onGet(`./backend/api/job-offers/{jobOfferSecretAccessToken}`).reply(200,
+mock.onGet(`./backend/api/job-offers/WNwi6CGqp9lgOmD4XeW8kZNdQr4DthiOpCXxOlVrh2XcJGeOuPeQ6d05o5hmyp4X`).reply(200,
     {
         "pageTitle": "Tööpakkumine",
         "businessName": "Marienthali Pruulikoda OÜ",
@@ -49,7 +49,7 @@ mock.onGet(`./backend/api/job-offers/{jobOfferSecretAccessToken}`).reply(200,
 
     )
 
-    mock.onGet(`./backend/api/new-employee-form/{jobOfferSecretAccessToken}`).reply(200,
+    mock.onGet(`./backend/api/new-employee-form/WNwi6CGqp9lgOmD4XeW8kZNdQr4DthiOpCXxOlVrh2XcJGeOuPeQ6d05o5hmyp4X`).reply(200,
         {
             "pageTitle": "Uue töötaja isikuandmete ankeet",
             "applicant": {

@@ -15,7 +15,7 @@ const formatDate = (dateString) => {
 }
 
 const getOfferData = () => {
-  axios.get(`./backend/api/job-offers/{jobOfferSecretAccessToken}`)
+  axios.get(`./backend/api/job-offers/WNwi6CGqp9lgOmD4XeW8kZNdQr4DthiOpCXxOlVrh2XcJGeOuPeQ6d05o5hmyp4X`)
     .then(response => {
       offerData.value = response.data
     })
@@ -25,7 +25,7 @@ const getOfferData = () => {
 }
 
 const getApplicantData = () => {
-    axios.get(`./backend/api/new-employee-form/{jobOfferSecretAccessToken}`)
+    axios.get(`./backend/api/new-employee-form/WNwi6CGqp9lgOmD4XeW8kZNdQr4DthiOpCXxOlVrh2XcJGeOuPeQ6d05o5hmyp4X`)
     .then(response => {
         applicantData.value = response.data
     })
@@ -98,7 +98,7 @@ getApplicantData()
                 <label for="link-checkbox" class="ml-2 text-sm font-medium">Olen tööpakkumise läbi lugenud ja nõustun selle tingimustega.</label>
             </div>
 
-            <RouterLink to="/new-employee-form/{jobOfferSecretAccessToken}">
+            <RouterLink to="/new-employee-form/WNwi6CGqp9lgOmD4XeW8kZNdQr4DthiOpCXxOlVrh2XcJGeOuPeQ6d05o5hmyp4X">
                 <button :disabled="readConfirm === false" @click="candidateFormOpen = true" class="text-white bg-teal-700 hover:bg-teal-600 py-2 px-4 rounded-md disabled:opacity-80 disabled:bg-gray-500 disabled:cursor-not-allowed">
                     Nõustun tööpakkumisega
                 </button>
