@@ -19,11 +19,13 @@ getBusinessName()
 </script>
 
 <template>
-  <div class="bg-amber-600 flex max-w-72 flex-col align-middle">
-    <RouterLink to="/" class="font-title text-2xl md:text-4xl py-12 text-white tracking-wider self-center">{{ businessName }}</RouterLink>
-  </div>
+  <div class="flex flex-col">
+    <div class="sticky bg-amber-600 flex w-full flex-col align-middle">
+      <RouterLink to="/" class="font-title text-2xl md:text-4xl py-12 text-white tracking-wider self-center">{{ businessName }}</RouterLink>
+    </div>
 
-  <div class="flex flex-col w-full items-center py-12">
-    <RouterView />
+    <div class="flex flex-col w-full items-center py-12">
+      <RouterView />
+    </div>
   </div>
 </template>
