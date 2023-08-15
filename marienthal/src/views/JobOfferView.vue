@@ -2,7 +2,6 @@
 import axios from 'axios'
 import { ref } from 'vue'
 import dayjs from 'dayjs'
-import { RouterView } from 'vue-router';
 
 const applicantData = ref({})
 const offerData = ref({})
