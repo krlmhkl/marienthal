@@ -1,9 +1,15 @@
 <script setup>
 import axios from 'axios'
 import { ref } from 'vue'
+import dayjs from 'dayjs'
 
 const applicantData = ref({})
 const offerData = ref({})
+
+const formatDate = (dateString) => {
+    const date = dayjs(dateString)
+    return date.format('MMMM D, YYYY')
+}
 
 const getOfferData = () => {
   axios.get(`./backend/api/job-offers/{jobOfferSecretAccessToken}`)
