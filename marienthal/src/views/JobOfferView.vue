@@ -2,6 +2,7 @@
 import axios from 'axios'
 import { ref } from 'vue'
 import dayjs from 'dayjs'
+import { RouterView } from 'vue-router';
 
 const applicantData = ref({})
 const offerData = ref({})
@@ -97,9 +98,11 @@ getApplicantData()
                 <label for="link-checkbox" class="ml-2 text-sm font-medium">Olen tööpakkumise läbi lugenud ja nõustun selle tingimustega.</label>
             </div>
 
-            <button :disabled="readConfirm === false" @click="candidateFormOpen = true" class="text-white bg-teal-700 hover:bg-teal-600 py-2 px-4 rounded-md disabled:opacity-80 disabled:bg-gray-500 disabled:cursor-not-allowed">
-                Nõustun tööpakkumisega
-            </button>
+            <RouterLink to="/new-employee-form/{jobOfferSecretAccessToken}">
+                <button :disabled="readConfirm === false" @click="candidateFormOpen = true" class="text-white bg-teal-700 hover:bg-teal-600 py-2 px-4 rounded-md disabled:opacity-80 disabled:bg-gray-500 disabled:cursor-not-allowed">
+                    Nõustun tööpakkumisega
+                </button>
+            </RouterLink>
         </div>
 
     </div>

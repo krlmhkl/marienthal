@@ -19,7 +19,7 @@ const router = createRouter({
     {
       path: '/new-employee-form/{jobOfferSecretAccessToken}',
       name: 'new-employee-form',
-      component: () => import('../components/CandidateForm.vue')
+      component: () => import('../views/CandidateFormView.vue')
     }
   ]
 })
