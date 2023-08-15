@@ -5,6 +5,8 @@ import dayjs from 'dayjs'
 
 const applicantData = ref({})
 const offerData = ref({})
+const readConfirm = ref(false)
+const candidateFormOpen = ref(false)
 
 const formatDate = (dateString) => {
     const date = dayjs(dateString)
@@ -90,6 +92,14 @@ getApplicantData()
                 <p>{{ benefit }}</p>
             </ul>
 
+            <div class="flex items-center my-6">
+                <input id="link-checkbox" type="checkbox" v-model="readConfirm" class="w-6 h-6 text-amber-500 color-amber-300 bg-amber-100 border-amber-300 rounded focus:ring-amber-500 focus:ring-1">
+                <label for="link-checkbox" class="ml-2 text-sm font-medium">Olen tööpakkumise läbi lugenud ja nõustun selle tingimustega.</label>
+            </div>
+
+            <button :disabled="readConfirm === false" @click="candidateFormOpen = true" class="text-white bg-teal-700 hover:bg-teal-600 py-2 px-4 rounded-md disabled:opacity-80 disabled:bg-gray-500 disabled:cursor-not-allowed">
+                Nõustun tööpakkumisega
+            </button>
         </div>
 
     </div>
